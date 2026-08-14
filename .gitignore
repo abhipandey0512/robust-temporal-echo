@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# EchoNet-Dynamic dataset
+EchoNet-Dynamic/
+*.avi
+*.mp4
+
+# Model checkpoints
+*.pt
+*.pth
+*.ckpt
+
+# Experiment outputs
+runs/
+wandb/
+outputs/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

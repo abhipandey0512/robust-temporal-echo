@@ -563,4 +563,10 @@ print("=" * 60)
 print(dataset.data["Split"].value_counts())
 
 
-    
+    )
+
+print("\n" + "=" * 60)
+print("DATASET SPLIT CHECK")
+print("=" * 60)
+
+print(dataset.data["Split"].value_counts())
