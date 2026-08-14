@@ -5,6 +5,7 @@ import torch
 
 from pathlib import Path
 from torch.utils.data import Dataset
+from torch.utils.data import DataLoader
 
 
 # ============================================================
@@ -274,3 +275,292 @@ if __name__ == "__main__":
         "to",
         video.max().item(),
     )
+    # ============================================================
+# Test Dataset
+# ============================================================
+
+if __name__ == "__main__":
+
+    dataset = EchoDataset(
+        csv_file=FILE_LIST,
+        video_dir=VIDEO_DIR,
+        num_frames=NUM_FRAMES,
+        image_size=IMAGE_SIZE,
+    )
+
+    print("=" * 60)
+    print("DATASET TEST")
+    print("=" * 60)
+
+    print("Number of samples:", len(dataset))
+
+    # --------------------------------------------------------
+    # Test one sample
+    # --------------------------------------------------------
+
+    video, label = dataset[0]
+
+    print("\nSample 0")
+
+    print("Video shape:", video.shape)
+    print("Video dtype:", video.dtype)
+    print("Label:", label.item())
+
+    print(
+        "Pixel range:",
+        video.min().item(),
+        "to",
+        video.max().item(),
+    )
+
+    # ========================================================
+    # DataLoader test
+    # ========================================================
+
+    dataloader = DataLoader(
+        dataset,
+        batch_size=4,
+        shuffle=True,
+        num_workers=0,
+    )
+
+    videos, labels = next(iter(dataloader))
+
+    print("\n" + "=" * 60)
+    print("DATALOADER TEST")
+    print("=" * 60)
+
+    print("Batch video shape:", videos.shape)
+    print("Batch label shape:", labels.shape)
+
+    print("Batch video dtype:", videos.dtype)
+    print("Batch labels:", labels)
+
+    print(
+        "Batch pixel range:",
+        videos.min().item(),
+        "to",
+        videos.max().item(),
+    )# ============================================================
+# Test Dataset
+# ============================================================
+
+if __name__ == "__main__":
+
+    dataset = EchoDataset(
+        csv_file=FILE_LIST,
+        video_dir=VIDEO_DIR,
+        num_frames=NUM_FRAMES,
+        image_size=IMAGE_SIZE,
+    )
+
+    print("=" * 60)
+    print("DATASET TEST")
+    print("=" * 60)
+
+    print("Number of samples:", len(dataset))
+
+    # --------------------------------------------------------
+    # Test one sample
+    # --------------------------------------------------------
+
+    video, label = dataset[0]
+
+    print("\nSample 0")
+
+    print("Video shape:", video.shape)
+    print("Video dtype:", video.dtype)
+    print("Label:", label.item())
+
+    print(
+        "Pixel range:",
+        video.min().item(),
+        "to",
+        video.max().item(),
+    )
+
+    # ========================================================
+    # DataLoader test
+    # ========================================================
+
+    dataloader = DataLoader(
+        dataset,
+        batch_size=4,
+        shuffle=True,
+        num_workers=0,
+    )
+
+    videos, labels = next(iter(dataloader))
+
+    print("\n" + "=" * 60)
+    print("DATALOADER TEST")
+    print("=" * 60)
+
+    print("Batch video shape:", videos.shape)
+    print("Batch label shape:", labels.shape)
+
+    print("Batch video dtype:", videos.dtype)
+    print("Batch labels:", labels)
+
+    print(
+        "Batch pixel range:",
+        videos.min().item(),
+        "to",
+        videos.max().item(),
+    )
+        # ========================================================
+    # DataLoader test
+    # ========================================================
+
+    dataloader = DataLoader(
+        dataset,
+        batch_size=4,
+        shuffle=True,
+        num_workers=0,
+    )
+
+    videos, labels = next(iter(dataloader))
+
+    print("\n" + "=" * 60)
+    print("DATALOADER TEST")
+    print("=" * 60)
+
+    print("Batch video shape:", videos.shape)
+    print("Batch label shape:", labels.shape)
+
+    print("Batch video dtype:", videos.dtype)
+    print("Batch labels:", labels)
+
+    print(
+        "Batch pixel range:",
+        videos.min().item(),
+        "to",
+        videos.max().item(),
+    )
+        # ========================================================
+    # DataLoader test
+    # ========================================================
+
+    dataloader = DataLoader(
+        dataset,
+        batch_size=4,
+        shuffle=True,
+        num_workers=0,
+    )
+
+    videos, labels = next(iter(dataloader))
+
+    print("\n" + "=" * 60)
+    print("DATALOADER TEST")
+    print("=" * 60)
+
+    print("Batch video shape:", videos.shape)
+    print("Batch label shape:", labels.shape)
+
+    print("Batch video dtype:", videos.dtype)
+    print("Batch labels:", labels)
+
+    print(
+        "Batch pixel range:",
+        videos.min().item(),
+        "to",
+        videos.max().item(),
+    )
+        # ========================================================
+    # DataLoader test
+    # ========================================================
+
+    dataloader = DataLoader(
+        dataset,
+        batch_size=4,
+        shuffle=True,
+        num_workers=0,
+    )
+
+    videos, labels = next(iter(dataloader))
+
+    print("\n" + "=" * 60)
+    print("DATALOADER TEST")
+    print("=" * 60)
+
+    print("Batch video shape:", videos.shape)
+    print("Batch label shape:", labels.shape)
+
+    print("Batch video dtype:", videos.dtype)
+    print("Batch labels:", labels)
+
+    print(
+        "Batch pixel range:",
+        videos.min().item(),
+        "to",
+        videos.max().item(),
+    )
+
+
+        # ========================================================
+    # DataLoader test
+    # ========================================================
+
+    dataloader = DataLoader(
+        dataset,
+        batch_size=4,
+        shuffle=True,
+        num_workers=0,
+    )
+
+    videos, labels = next(iter(dataloader))
+
+    print("\n" + "=" * 60)
+    print("DATALOADER TEST")
+    print("=" * 60)
+
+    print("Batch video shape:", videos.shape)
+    print("Batch label shape:", labels.shape)
+
+    print("Batch video dtype:", videos.dtype)
+    print("Batch labels:", labels)
+
+    print(
+        "Batch pixel range:",
+        videos.min().item(),
+        "to",
+        videos.max().item(),
+    )
+    # ========================================================
+    # DataLoader test
+    # ========================================================
+
+    dataloader = DataLoader(
+        dataset,
+        batch_size=4,
+        shuffle=True,
+        num_workers=0,
+    )
+
+    videos, labels = next(iter(dataloader))
+
+    print("\n" + "=" * 60)
+    print("DATALOADER TEST")
+    print("=" * 60)
+
+    print("Batch video shape:", videos.shape)
+    print("Batch label shape:", labels.shape)
+
+    print("Batch video dtype:", videos.dtype)
+    print("Batch labels:", labels)
+
+    print(
+        "Batch pixel range:",
+        videos.min().item(),
+        "to",
+        videos.max().item(),
+    )
+
+print("\n" + "=" * 60)
+print("DATASET SPLIT CHECK")
+print("=" * 60)
+
+print(dataset.data["Split"].value_counts())
+
+
+    
