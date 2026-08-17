@@ -2,7 +2,6 @@ import cv2
 import numpy as np
 import pandas as pd
 import torch
-
 from pathlib import Path
 from torch.utils.data import Dataset
 from torch.utils.data import DataLoader
@@ -31,18 +30,23 @@ class EchoDataset(Dataset):
         self,
         csv_file,
         video_dir,
+        split=None,
         num_frames=10,
         image_size=(32, 32),
     ):
 
         self.data = pd.read_csv(csv_file)
 
+        if split is not None:
+            self.data = self.data[
+                self.data["Split"] == split
+            ].reset_index(drop=True)
+
         self.video_dir = Path(video_dir)
 
         self.num_frames = num_frames
 
         self.image_size = image_size
-
 
     # --------------------------------------------------------
     # Number of samples
@@ -555,18 +559,3 @@ if __name__ == "__main__":
         "to",
         videos.max().item(),
     )
-
-print("\n" + "=" * 60)
-print("DATASET SPLIT CHECK")
-print("=" * 60)
-
-print(dataset.data["Split"].value_counts())
-
-
-    )
-
-print("\n" + "=" * 60)
-print("DATASET SPLIT CHECK")
-print("=" * 60)
-
-print(dataset.data["Split"].value_counts())
